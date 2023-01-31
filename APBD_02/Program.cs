@@ -11,8 +11,7 @@ public class Program
         var studentList = new List<Student>();
         var studiesList = new List<ActiveStudies>();
 
-
-        string logger = args[1];
+        string logger = "";
         StreamWriter streamWriter = null;
 
         if(File.Exists(logger))
@@ -121,6 +120,7 @@ public class Program
 
             }
         }
+        string destination = args[1];
         string format = args[2];
         if (!(format == "json"))
         {
@@ -140,6 +140,7 @@ public class Program
                 NumberOfStudents = studiesList.Values
             }
         }
+        File.WriteAllLines(destination, university.ToString());
        
     }
     
