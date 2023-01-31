@@ -11,7 +11,7 @@ public class Program
         var studentList = new List<Student>();
         var studiesList = new List<ActiveStudies>();
 
-        string logger = "";
+        string logger = "log.txt";
         StreamWriter streamWriter = null;
 
         if(File.Exists(logger))
